@@ -4,6 +4,8 @@ import Home from "./routes/home";
 import Profile from "./routes/profile";
 import Login from "./routes/login";
 import CreateAccount from "./routes/create-account";
+import reset from "styled-reset";
+import { createGlobalStyle } from "styled-components";
 
 const router = createBrowserRouter([
   {
@@ -30,9 +32,22 @@ const router = createBrowserRouter([
   },
 ]);
 
+const GlobalStyles = createGlobalStyle`
+  ${reset};
+  * {
+    box-sizing: border-box
+    }  
+  body {
+      background-color: black;
+      color: white;
+      font-family: pretendard;
+    }
+  `;
+
 function App() {
   return (
     <>
+      <GlobalStyles />
       <RouterProvider router={router} />
     </>
   );
