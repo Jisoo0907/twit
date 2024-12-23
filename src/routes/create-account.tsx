@@ -81,7 +81,7 @@ export default function CreateAccount() {
     } finally {
       setLoading(false);
     }
-    // create an accoung
+    // create an account
     // set the name of the user
     // redirect to the home page
     console.log(name, email, password);

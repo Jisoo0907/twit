@@ -9,11 +9,16 @@ import styled, { createGlobalStyle } from "styled-components";
 import { useEffect, useState } from "react";
 import LoadingScreen from "./components/loading-screen";
 import { auth } from "./firebase";
+import ProtectedRoute from "./components/protected-route";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />, // 인증된 사용자에게만 보여지게끔
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ), // 인증된 사용자에게만 보여지게끔
     children: [
       {
         path: "", // 비워두면 부모 경로와 동일(여기서는 "/")
