@@ -17,6 +17,8 @@ import GithubButton from "../components/github-btn";
   "auth/email-already-in-use": "That email already exists.",
 }; */
 
+/* https://ko.react.dev/learn/choosing-the-state-structure참고해서 수정 필요 */
+
 export default function CreateAccount() {
   const navigate = useNavigate();
   const [isLoading, setLoading] = useState(false);
