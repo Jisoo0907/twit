@@ -12,7 +12,6 @@ import {
   Wrapper,
 } from "../components/auth-components";
 import GithubButton from "../components/github-btn";
-import ResetPassword from "../components/reset-pwd";
 
 /* const errors = {
   "auth/email-already-in-use": "That email already exists.",
